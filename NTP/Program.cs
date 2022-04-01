@@ -16,7 +16,7 @@ namespace NTP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm5Plaka());
+            Application.Run(new frmGuvenlik());
         }
     }
 }
