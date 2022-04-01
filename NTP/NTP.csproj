@@ -540,6 +540,10 @@
     <EmbeddedResource Include="vtTest.resx">
       <DependentUpon>vtTest.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\NTP %281%29.vshost.exe.manifest" />
+    <None Include="bin\Debug\NTP.exe.config" />
+    <None Include="bin\Debug\NTP.vshost.exe.config" />
+    <None Include="bin\Debug\NTP.vshost.exe.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -554,6 +558,36 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\DevExpress.Data.v16.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v16.2.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v16.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v16.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v16.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v16.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v16.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v16.2.xml" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\NTP.exe" />
+    <Content Include="bin\Debug\NTP.pdb" />
+    <Content Include="bin\Debug\NTP.vshost.exe" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\verilerim.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="hariciler\baseline_thumb_down_alt_black_24dp.png" />
     <Content Include="hariciler\dollar.png" />
     <Content Include="hariciler\havayollari-ucak-bileti.jpg" />
