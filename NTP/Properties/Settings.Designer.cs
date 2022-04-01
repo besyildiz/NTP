@@ -22,5 +22,16 @@ namespace NTP.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\bin\\Debug\\verilerim." +
+            "mdb;Persist Security Info=True")]
+        public string verilerimBaglanti {
+            get {
+                return ((string)(this["verilerimBaglanti"]));
+            }
+        }
     }
 }

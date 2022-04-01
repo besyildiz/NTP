@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -368,6 +368,11 @@
     <Compile Include="oncekiler\sayac1.Designer.cs">
       <DependentUpon>sayac1.cs</DependentUpon>
     </Compile>
+    <Compile Include="verilerimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>verilerimDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="vtTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -554,6 +559,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="verilerimDataSet.xsc">
+      <DependentUpon>verilerimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="verilerimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>verilerimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="verilerimDataSet.xss">
+      <DependentUpon>verilerimDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

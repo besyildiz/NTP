@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGuvenlik));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btGiris = new System.Windows.Forms.Button();
             this.tbSifre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btGiris = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,27 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Güvenlik";
+            // 
+            // button2
+            // 
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(36, 172);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 67);
+            this.button2.TabIndex = 5;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btGiris
+            // 
+            this.btGiris.Enabled = false;
+            this.btGiris.Image = ((System.Drawing.Image)(resources.GetObject("btGiris.Image")));
+            this.btGiris.Location = new System.Drawing.Point(225, 172);
+            this.btGiris.Name = "btGiris";
+            this.btGiris.Size = new System.Drawing.Size(114, 67);
+            this.btGiris.TabIndex = 4;
+            this.btGiris.UseVisualStyleBackColor = true;
+            this.btGiris.Click += new System.EventHandler(this.btGiris_Click);
             // 
             // tbSifre
             // 
@@ -92,27 +113,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı adı:";
             // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(36, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 67);
-            this.button2.TabIndex = 5;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btGiris
-            // 
-            this.btGiris.Enabled = false;
-            this.btGiris.Image = ((System.Drawing.Image)(resources.GetObject("btGiris.Image")));
-            this.btGiris.Location = new System.Drawing.Point(225, 172);
-            this.btGiris.Name = "btGiris";
-            this.btGiris.Size = new System.Drawing.Size(114, 67);
-            this.btGiris.TabIndex = 4;
-            this.btGiris.UseVisualStyleBackColor = true;
-            this.btGiris.Click += new System.EventHandler(this.btGiris_Click);
-            // 
             // frmGuvenlik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,6 +125,7 @@
             this.Name = "frmGuvenlik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Güvenli Giriş";
+            this.Load += new System.EventHandler(this.frmGuvenlik_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
