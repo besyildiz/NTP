@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 453);
+            this.ClientSize = new System.Drawing.Size(720, 565);
             this.Controls.Add(this.button1);
             this.Name = "vtTest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
