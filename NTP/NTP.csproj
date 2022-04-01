@@ -544,6 +544,7 @@
     <None Include="bin\Debug\NTP.exe.config" />
     <None Include="bin\Debug\NTP.vshost.exe.config" />
     <None Include="bin\Debug\NTP.vshost.exe.manifest" />
+    <None Include="bin\Debug\verilerim.ldb" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
