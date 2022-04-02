@@ -23,7 +23,8 @@ namespace NTP
             Application.Exit();
         }
 
-        string kullaniciAdi, sifre;
+        public  static string kullaniciAdi="";
+           public static string sifre ="";
 
         OleDbConnection con;
         OleDbCommand sorgu;
@@ -40,7 +41,8 @@ namespace NTP
                 veri = sorgu.ExecuteReader();
                 if (veri.Read())
                 {
-
+                    sifre = veri["sifre"].ToString();
+                    kullaniciAdi = veri["kullaniciAdi"].ToString();
                     frmAna f = new frmAna();
                     f.Show();
                     this.Visible = false;
