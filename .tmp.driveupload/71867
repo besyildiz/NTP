@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47DCFE97-0B4E-4B3F-B231-8E08F6808063}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NTP</RootNamespace>
+    <AssemblyName>NTP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Money.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form_nesneleri\frmBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_nesneleri\frmBrowser.Designer.cs">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_nesneleri\frmDeneme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_nesneleri\frmDeneme.Designer.cs">
+      <DependentUpon>frmDeneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_nesneleri\frmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_nesneleri\frmGiris.Designer.cs">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_nesneleri\frmHakkinda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_nesneleri\frmHakkinda.Designer.cs">
+      <DependentUpon>frmHakkinda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_nesneleri\frmKonu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_nesneleri\frmKonu1.Designer.cs">
+      <DependentUpon>frmKonu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_nesneleri\frmKonu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_nesneleri\frmKonu2.Designer.cs">
+      <DependentUpon>frmKonu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_nesneleri\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_nesneleri\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="binding\frm2IsimBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="binding\frm2IsimBilgileri.Designer.cs">
+      <DependentUpon>frm2IsimBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="binding\frm3DataSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="binding\frm3DataSource.Designer.cs">
+      <DependentUpon>frm3DataSource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="binding\frm4Kitaplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="binding\frm4Kitaplar.Designer.cs">
+      <DependentUpon>frm4Kitaplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="binding\frm5Plaka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="binding\frm5Plaka.Designer.cs">
+      <DependentUpon>frm5Plaka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="binding\frm6_GridView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="binding\frm6_GridView.Designer.cs">
+      <DependentUpon>frm6_GridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="binding\frmBasitVeriBaglama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="binding\frmBasitVeriBaglama.Designer.cs">
+      <DependentUpon>frmBasitVeriBaglama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAna.Designer.cs">
+      <DependentUpon>frmAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGuvenlik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGuvenlik.Designer.cs">
+      <DependentUpon>frmGuvenlik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSifreDegistir.Designer.cs">
+      <DependentUpon>frmSifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokMalzemeCesidi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokMalzemeCesidi.Designer.cs">
+      <DependentUpon>frmStokMalzemeCesidi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\aritmetik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\aritmetik.Designer.cs">
+      <DependentUpon>aritmetik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\form3.Designer.cs">
+      <DependentUpon>form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frm1Bolumebilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frm1Bolumebilme.Designer.cs">
+      <DependentUpon>frm1Bolumebilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmBreak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmBreak.Designer.cs">
+      <DependentUpon>frmBreak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmCarpim1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmCarpim1.Designer.cs">
+      <DependentUpon>frmCarpim1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmClass1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmClass1.Designer.cs">
+      <DependentUpon>frmClass1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmContinue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmContinue.Designer.cs">
+      <DependentUpon>frmContinue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi.Designer.cs">
+      <DependentUpon>frmDizi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi1.Designer.cs">
+      <DependentUpon>frmDizi1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi3.Designer.cs">
+      <DependentUpon>frmDizi3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmDizi2.Designer.cs">
+      <DependentUpon>frmDizi2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmDiziIkiBoyutlu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmDiziIkiBoyutlu.Designer.cs">
+      <DependentUpon>frmDiziIkiBoyutlu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmDongu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmDongu1.Designer.cs">
+      <DependentUpon>frmDongu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmDoWhile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmDoWhile.Designer.cs">
+      <DependentUpon>frmDoWhile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmfor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmfor2.Designer.cs">
+      <DependentUpon>frmfor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmHesaplama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmHesaplama.Designer.cs">
+      <DependentUpon>frmHesaplama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmIkinci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmIkinci.Designer.cs">
+      <DependentUpon>frmIkinci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmIndirim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmIndirim.Designer.cs">
+      <DependentUpon>frmIndirim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmKontrol.Designer.cs">
+      <DependentUpon>frmKontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmLamba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmLamba.Designer.cs">
+      <DependentUpon>frmLamba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmList1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmList1.Designer.cs">
+      <DependentUpon>frmList1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmListBox.Designer.cs">
+      <DependentUpon>frmListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmMantiksal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmMantiksal.Designer.cs">
+      <DependentUpon>frmMantiksal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmNetHesaplama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmNetHesaplama.Designer.cs">
+      <DependentUpon>frmNetHesaplama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmRecai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmRecai.Designer.cs">
+      <DependentUpon>frmRecai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmRenkDegisimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmRenkDegisimi.Designer.cs">
+      <DependentUpon>frmRenkDegisimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmSayiTahmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmSayiTahmin.Designer.cs">
+      <DependentUpon>frmSayiTahmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmSuKaynama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmSuKaynama.Designer.cs">
+      <DependentUpon>frmSuKaynama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmSwitch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmSwitch.Designer.cs">
+      <DependentUpon>frmSwitch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmTahmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmTahmin.Designer.cs">
+      <DependentUpon>frmTahmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmTekMiCiftMi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmTekMiCiftMi.Designer.cs">
+      <DependentUpon>frmTekMiCiftMi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmTry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmTry.Designer.cs">
+      <DependentUpon>frmTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oncekiler\frmwhile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\frmwhile.Designer.cs">
+      <DependentUpon>frmwhile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="oncekiler\sayac1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oncekiler\sayac1.Designer.cs">
+      <DependentUpon>sayac1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verilerimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>verilerimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vtTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtTest.Designer.cs">
+      <DependentUpon>vtTest.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="form_nesneleri\frmBrowser.resx">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_nesneleri\frmDeneme.resx">
+      <DependentUpon>frmDeneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_nesneleri\frmGiris.resx">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_nesneleri\frmHakkinda.resx">
+      <DependentUpon>frmHakkinda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_nesneleri\frmKonu1.resx">
+      <DependentUpon>frmKonu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_nesneleri\frmKonu2.resx">
+      <DependentUpon>frmKonu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_nesneleri\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="binding\frm2IsimBilgileri.resx">
+      <DependentUpon>frm2IsimBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="binding\frm3DataSource.resx">
+      <DependentUpon>frm3DataSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="binding\frm4Kitaplar.resx">
+      <DependentUpon>frm4Kitaplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="binding\frm5Plaka.resx">
+      <DependentUpon>frm5Plaka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="binding\frm6_GridView.resx">
+      <DependentUpon>frm6_GridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="binding\frmBasitVeriBaglama.resx">
+      <DependentUpon>frmBasitVeriBaglama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAna.resx">
+      <DependentUpon>frmAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGuvenlik.resx">
+      <DependentUpon>frmGuvenlik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSifreDegistir.resx">
+      <DependentUpon>frmSifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokMalzemeCesidi.resx">
+      <DependentUpon>frmStokMalzemeCesidi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\aritmetik.resx">
+      <DependentUpon>aritmetik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\form3.resx">
+      <DependentUpon>form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frm1Bolumebilme.resx">
+      <DependentUpon>frm1Bolumebilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmBreak.resx">
+      <DependentUpon>frmBreak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmCarpim1.resx">
+      <DependentUpon>frmCarpim1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmClass1.resx">
+      <DependentUpon>frmClass1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmContinue.resx">
+      <DependentUpon>frmContinue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmDizi.resx">
+      <DependentUpon>frmDizi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmDizi1.resx">
+      <DependentUpon>frmDizi1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmDizi3.resx">
+      <DependentUpon>frmDizi3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmDizi2.resx">
+      <DependentUpon>frmDizi2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmDiziIkiBoyutlu.resx">
+      <DependentUpon>frmDiziIkiBoyutlu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmDongu1.resx">
+      <DependentUpon>frmDongu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmDoWhile.resx">
+      <DependentUpon>frmDoWhile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmfor2.resx">
+      <DependentUpon>frmfor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmHesaplama.resx">
+      <DependentUpon>frmHesaplama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmIkinci.resx">
+      <DependentUpon>frmIkinci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmIndirim.resx">
+      <DependentUpon>frmIndirim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmKontrol.resx">
+      <DependentUpon>frmKontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmLamba.resx">
+      <DependentUpon>frmLamba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmList1.resx">
+      <DependentUpon>frmList1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmListBox.resx">
+      <DependentUpon>frmListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmMantiksal.resx">
+      <DependentUpon>frmMantiksal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmNetHesaplama.resx">
+      <DependentUpon>frmNetHesaplama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmRecai.resx">
+      <DependentUpon>frmRecai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmRenkDegisimi.resx">
+      <DependentUpon>frmRenkDegisimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmSayiTahmin.resx">
+      <DependentUpon>frmSayiTahmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmSuKaynama.resx">
+      <DependentUpon>frmSuKaynama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmSwitch.resx">
+      <DependentUpon>frmSwitch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmTahmin.resx">
+      <DependentUpon>frmTahmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmTekMiCiftMi.resx">
+      <DependentUpon>frmTekMiCiftMi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmTry.resx">
+      <DependentUpon>frmTry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oncekiler\frmwhile.resx">
+      <DependentUpon>frmwhile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="oncekiler\sayac1.resx">
+      <DependentUpon>sayac1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtTest.resx">
+      <DependentUpon>vtTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\NTP %281%29.vshost.exe.manifest" />
+    <None Include="bin\Debug\NTP.exe.config" />
+    <None Include="bin\Debug\NTP.vshost.exe.config" />
+    <None Include="bin\Debug\NTP.vshost.exe.manifest" />
+    <None Include="bin\Debug\verilerim.ldb" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="verilerimDataSet.xsc">
+      <DependentUpon>verilerimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="verilerimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>verilerimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="verilerimDataSet.xss">
+      <DependentUpon>verilerimDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DevExpress.Data.v16.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v16.2.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v16.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v16.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v16.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v16.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v16.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v16.2.xml" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\NTP.exe" />
+    <Content Include="bin\Debug\NTP.pdb" />
+    <Content Include="bin\Debug\NTP.vshost.exe" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v16.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Pdf.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Printing.v16.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Utils.v16.2.resources.dll" />
+    <Content Include="bin\Debug\verilerim.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hariciler\baseline_thumb_down_alt_black_24dp.png" />
+    <Content Include="hariciler\dollar.png" />
+    <Content Include="hariciler\havayollari-ucak-bileti.jpg" />
+    <Content Include="hariciler\Money.ico" />
+    <Content Include="hariciler\outline_cancel_black_24dp.png" />
+    <Content Include="hariciler\outline_key_black_24dp.png" />
+    <Content Include="hariciler\outline_login_black_24dp.png" />
+    <Content Include="hariciler\outline_security_black_24dp.png" />
+    <Content Include="hariciler\Sandbag.ico" />
+    <Content Include="hariciler\Security.ico" />
+    <Content Include="Money.ico" />
+    <None Include="Resources\ekrem_gulcuoglu.jpg" />
+    <None Include="Resources\outline_arrow_back_black_24dp.png" />
+    <None Include="Resources\outline_arrow_forward_black_24dp.png" />
+    <None Include="Resources\outline_search_black_24dp1.png" />
+    <None Include="Resources\outline_search_black_24dp.png" />
+    <None Include="Resources\outline_refresh_black_24dp.png" />
+    <None Include="Resources\baseline_emoji_emotions_black_24dp.png" />
+    <None Include="Resources\baseline_thumb_up_alt_black_24dp.png" />
+    <None Include="Resources\baseline_thumb_down_alt_black_24dp.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

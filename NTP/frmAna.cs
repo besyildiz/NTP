@@ -23,5 +23,12 @@ namespace NTP
             f.Show();
             this.Close();
         }
+
+        private void btStokMalzemeleri_Click(object sender, EventArgs e)
+        {
+            frmStokMalzemeCesidi f = new frmStokMalzemeCesidi();
+            
+            f.ShowDialog();
+        }
     }
 }

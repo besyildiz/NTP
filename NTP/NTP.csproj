@@ -156,6 +156,12 @@
     <Compile Include="frmSifreDegistir.Designer.cs">
       <DependentUpon>frmSifreDegistir.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStokMalzemeCesidi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokMalzemeCesidi.Designer.cs">
+      <DependentUpon>frmStokMalzemeCesidi.cs</DependentUpon>
+    </Compile>
     <Compile Include="oncekiler\aritmetik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -426,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSifreDegistir.resx">
       <DependentUpon>frmSifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokMalzemeCesidi.resx">
+      <DependentUpon>frmStokMalzemeCesidi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="oncekiler\aritmetik.resx">
       <DependentUpon>aritmetik.cs</DependentUpon>
