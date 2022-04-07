@@ -24,7 +24,13 @@ namespace NTP
             {
                 if (eskiSifreDogru() && yeniSifreDogru())
                 {
-
+                    baglanti();
+                    sorgu = new OleDbCommand();
+                    sorgu.CommandText = "update kullanicilar set sifre='" + tbYeniSifre.Text + "' where kullaniciAdi='" + frmGuvenlik.kullaniciAdi + "'";
+                    sorgu.Connection = con;
+                    sorgu.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Şifreniz başarıyla değiştirilmiştir");
                 }
             }
             catch (Exception w)
@@ -34,10 +40,11 @@ namespace NTP
             }
         }
         private bool eskiSifreDogru()
-        {   if (frmGuvenlik.sifre==tbEskiSifre.Text)
-            return true; 
+        {
+            if (frmGuvenlik.sifre == tbEskiSifre.Text)
+                return true;
             else { MessageBox.Show("Eski şifre hatalı!..."); return false; }
-             
+
         }
         OleDbConnection con;
         OleDbCommand sorgu;
@@ -45,9 +52,35 @@ namespace NTP
 
         private bool yeniSifreDogru()
         {
-            if (tbYeniSifre.Text==tbYeniSifreTekrar.Text)
-             return true;else { MessageBox.Show("Yeni şifreler birbirini tutmuyor!..."); return false; }
-             
+            if (tbYeniSifre.Text == null || tbYeniSifre.Text == "")
+            {
+                MessageBox.Show("Yeni şifrenizi boş bırakamazsınız!...");
+                return false;
+            }
+            else
+            {
+                if (tbYeniSifre.Text == tbYeniSifreTekrar.Text)
+                    return true;
+                else { MessageBox.Show("Yeni şifreler birbirini tutmuyor!..."); return false; }
+            }
+
+
+        }
+
+
+        public void baglanti()
+        {
+
+            try
+            {
+                con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=verilerim.mdb");
+                con.Open();
+            }
+            catch (Exception w)
+            {
+
+                MessageBox.Show(w.Message);
+            }
         }
 
 
