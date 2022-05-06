@@ -20,8 +20,8 @@ namespace NTP
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmSifreDegistir f = new frmSifreDegistir();
-            f.Show();
-            this.Close();
+            f.ShowDialog();
+ 
         }
 
         private void btStokMalzemeleri_Click(object sender, EventArgs e)
@@ -29,6 +29,11 @@ namespace NTP
             frmStokMalzemeCesidi f = new frmStokMalzemeCesidi();
             
             f.ShowDialog();
+        }
+
+        private void frmAna_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

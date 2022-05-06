@@ -37,17 +37,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.gvMalzemeler = new System.Windows.Forms.DataGridView();
-            this.verilerimDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.verilerimDataSet = new NTP.verilerimDataSet();
-            this.stokMalzemeleriBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stokMalzemeleriTableAdapter = new NTP.verilerimDataSetTableAdapters.stokMalzemeleriTableAdapter();
             this.malzemeAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stokMalzemeleriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.verilerimDataSet = new NTP.verilerimDataSet();
+            this.stokMalzemeleriTableAdapter = new NTP.verilerimDataSetTableAdapters.stokMalzemeleriTableAdapter();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gvMalzemeler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokMalzemeleriBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSet)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btEkle
@@ -124,36 +125,20 @@
             // 
             this.gvMalzemeler.AllowUserToOrderColumns = true;
             this.gvMalzemeler.AutoGenerateColumns = false;
+            this.gvMalzemeler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvMalzemeler.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.gvMalzemeler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvMalzemeler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.malzemeAdiDataGridViewTextBoxColumn,
             this.birimDataGridViewTextBoxColumn,
             this.markasiDataGridViewTextBoxColumn});
+            this.gvMalzemeler.ContextMenuStrip = this.contextMenuStrip1;
             this.gvMalzemeler.DataSource = this.stokMalzemeleriBindingSource;
-            this.gvMalzemeler.Location = new System.Drawing.Point(29, 221);
+            this.gvMalzemeler.Location = new System.Drawing.Point(29, 236);
             this.gvMalzemeler.Name = "gvMalzemeler";
             this.gvMalzemeler.RowTemplate.Height = 24;
-            this.gvMalzemeler.Size = new System.Drawing.Size(497, 157);
+            this.gvMalzemeler.Size = new System.Drawing.Size(497, 150);
             this.gvMalzemeler.TabIndex = 12;
-            // 
-            // verilerimDataSetBindingSource
-            // 
-            this.verilerimDataSetBindingSource.DataSource = this.verilerimDataSet;
-            this.verilerimDataSetBindingSource.Position = 0;
-            // 
-            // verilerimDataSet
-            // 
-            this.verilerimDataSet.DataSetName = "verilerimDataSet";
-            this.verilerimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stokMalzemeleriBindingSource
-            // 
-            this.stokMalzemeleriBindingSource.DataMember = "stokMalzemeleri";
-            this.stokMalzemeleriBindingSource.DataSource = this.verilerimDataSetBindingSource;
-            // 
-            // stokMalzemeleriTableAdapter
-            // 
-            this.stokMalzemeleriTableAdapter.ClearBeforeFill = true;
             // 
             // malzemeAdiDataGridViewTextBoxColumn
             // 
@@ -172,6 +157,35 @@
             this.markasiDataGridViewTextBoxColumn.DataPropertyName = "markasi";
             this.markasiDataGridViewTextBoxColumn.HeaderText = "Marka";
             this.markasiDataGridViewTextBoxColumn.Name = "markasiDataGridViewTextBoxColumn";
+            // 
+            // stokMalzemeleriBindingSource
+            // 
+            this.stokMalzemeleriBindingSource.DataMember = "stokMalzemeleri";
+            this.stokMalzemeleriBindingSource.DataSource = this.verilerimDataSet;
+            // 
+            // verilerimDataSet
+            // 
+            this.verilerimDataSet.DataSetName = "verilerimDataSet";
+            this.verilerimDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stokMalzemeleriTableAdapter
+            // 
+            this.stokMalzemeleriTableAdapter.ClearBeforeFill = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 56);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(175, 24);
+            this.toolStripMenuItem1.Text = "Sil";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // frmStokMalzemeCesidi
             // 
@@ -192,9 +206,9 @@
             this.Text = "Stok Malzeme Çeşitleri";
             this.Load += new System.EventHandler(this.frmStokMalzemeCesidi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvMalzemeler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokMalzemeleriBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSet)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,12 +224,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView gvMalzemeler;
-        private System.Windows.Forms.BindingSource verilerimDataSetBindingSource;
         private verilerimDataSet verilerimDataSet;
         private System.Windows.Forms.BindingSource stokMalzemeleriBindingSource;
         private verilerimDataSetTableAdapters.stokMalzemeleriTableAdapter stokMalzemeleriTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn malzemeAdiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn birimDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn markasiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

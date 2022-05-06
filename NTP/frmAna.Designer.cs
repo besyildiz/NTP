@@ -107,10 +107,13 @@
             this.Controls.Add(this.btStokGirisi);
             this.Controls.Add(this.btStokMalzemeleri);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "frmAna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAna";
+            this.Text = "Satış Takip Programı";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAna_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

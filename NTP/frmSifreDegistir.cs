@@ -83,6 +83,8 @@ namespace NTP
             }
         }
 
-
+        private void btIptal_Click(object sender, EventArgs e)
+        { this.Close();
+        }
     }
 }

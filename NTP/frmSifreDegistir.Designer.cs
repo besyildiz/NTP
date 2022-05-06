@@ -32,12 +32,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbYeniSifreTekrar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btIptal = new System.Windows.Forms.Button();
+            this.btSifreDegistir = new System.Windows.Forms.Button();
             this.tbYeniSifre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbEskiSifre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btIptal = new System.Windows.Forms.Button();
-            this.btSifreDegistir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,26 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Yeni Şifreniz(tekrar):";
             // 
+            // btIptal
+            // 
+            this.btIptal.Image = ((System.Drawing.Image)(resources.GetObject("btIptal.Image")));
+            this.btIptal.Location = new System.Drawing.Point(86, 171);
+            this.btIptal.Name = "btIptal";
+            this.btIptal.Size = new System.Drawing.Size(114, 67);
+            this.btIptal.TabIndex = 5;
+            this.btIptal.UseVisualStyleBackColor = true;
+            this.btIptal.Click += new System.EventHandler(this.btIptal_Click);
+            // 
+            // btSifreDegistir
+            // 
+            this.btSifreDegistir.Image = ((System.Drawing.Image)(resources.GetObject("btSifreDegistir.Image")));
+            this.btSifreDegistir.Location = new System.Drawing.Point(255, 171);
+            this.btSifreDegistir.Name = "btSifreDegistir";
+            this.btSifreDegistir.Size = new System.Drawing.Size(114, 67);
+            this.btSifreDegistir.TabIndex = 4;
+            this.btSifreDegistir.UseVisualStyleBackColor = true;
+            this.btSifreDegistir.Click += new System.EventHandler(this.btSifreDegistir_Click);
+            // 
             // tbYeniSifre
             // 
             this.tbYeniSifre.Location = new System.Drawing.Point(209, 70);
@@ -109,25 +129,6 @@
             this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Eski şifreniz:";
-            // 
-            // btIptal
-            // 
-            this.btIptal.Image = ((System.Drawing.Image)(resources.GetObject("btIptal.Image")));
-            this.btIptal.Location = new System.Drawing.Point(86, 171);
-            this.btIptal.Name = "btIptal";
-            this.btIptal.Size = new System.Drawing.Size(114, 67);
-            this.btIptal.TabIndex = 5;
-            this.btIptal.UseVisualStyleBackColor = true;
-            // 
-            // btSifreDegistir
-            // 
-            this.btSifreDegistir.Image = ((System.Drawing.Image)(resources.GetObject("btSifreDegistir.Image")));
-            this.btSifreDegistir.Location = new System.Drawing.Point(255, 171);
-            this.btSifreDegistir.Name = "btSifreDegistir";
-            this.btSifreDegistir.Size = new System.Drawing.Size(114, 67);
-            this.btSifreDegistir.TabIndex = 4;
-            this.btSifreDegistir.UseVisualStyleBackColor = true;
-            this.btSifreDegistir.Click += new System.EventHandler(this.btSifreDegistir_Click);
             // 
             // frmSifreDegistir
             // 
