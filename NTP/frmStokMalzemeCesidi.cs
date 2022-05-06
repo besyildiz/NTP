@@ -20,7 +20,7 @@ namespace NTP
 
 
 
-        OleDbConnection con;
+        OleDbConnection con=new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=verilerim.mdb");
         OleDbCommand sorgu;
         OleDbDataReader veri;
         public void baglanti()
@@ -28,7 +28,7 @@ namespace NTP
 
             try
             {
-                con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=verilerim.mdb");
+             
                 con.Open();
             }
             catch (Exception w)
@@ -49,42 +49,20 @@ namespace NTP
             tbMalzemeAdi.Text = "";
             tbMarkasi.Text = "";
 
-            /*
-            frmStokMalzemeCesidi_Load(null, null);
-
-            */
 
             verileriGetir();
-            /*
-            this.stokMalzemeleriTableAdapter.Fill(this.verilerimDataSet.stokMalzemeleri);
 
-
-            gvMalzemeler.DataSource = stokMalzemeleriTableAdapter.GetData().ToList();// verilerimDataSet.stokMalzemeleri;
-  
-            gvMalzemeler.Update();
-            gvMalzemeler.Refresh();
-            /*
-            gvMalzemeler.Update();
-            this.gvMalzemeler.Refresh();
-          
-            this.gvMalzemeler.Parent.Refresh();
-            */
 
         }
 
         private void verileriGetir()
         {
-          //  oledbconn conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Sella.Properties.Settings.Database1ConnectionString1"].ConnectionString);
-            // A SqlCommand object is used to execute the SQL commands.
-            con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=verilerim.mdb");
+
+          
             OleDbCommand sorgu = new OleDbCommand("select * from stokMalzemeleri", con);
 
-
-            //  SqlCommand scmd = new SqlCommand("Select * From CustCalls", con);
-            // A SqlDataAdapter uses the SqlCommand object to fill a DataSet.
             OleDbDataAdapter veri = new OleDbDataAdapter(sorgu);
-            //  SqlDataAdapter sda = new SqlDataAdapter(scmd);
-            // Create and Fill a new DataSet.
+
             DataTable dt = new DataTable();
             veri.Fill(dt);
 
