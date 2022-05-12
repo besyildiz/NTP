@@ -20,15 +20,13 @@ namespace NTP
 
 
 
-        OleDbConnection con=new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=verilerim.mdb");
-        OleDbCommand sorgu;
-        OleDbDataReader veri;
+       
         public void baglanti()
         {
 
             try
             {
-             
+
                 con.Open();
             }
             catch (Exception w)
@@ -58,7 +56,7 @@ namespace NTP
         private void verileriGetir()
         {
 
-          
+
             OleDbCommand sorgu = new OleDbCommand("select * from stokMalzemeleri", con);
 
             OleDbDataAdapter veri = new OleDbDataAdapter(sorgu);
@@ -70,31 +68,49 @@ namespace NTP
             gvMalzemeler.Update();
             gvMalzemeler.Refresh();
 
-
-
-
-      /*
-
-            sda.Fill(dt);
-
-            dataGridView1.DataSource = dt;
-
-
-    */
-
-
+             
         }
-
-
+         
         private void frmStokMalzemeCesidi_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'verilerimDataSet.stokMalzemeleri' table. You can move, or remove it, as needed.
-        this.stokMalzemeleriTableAdapter.Fill(this.verilerimDataSet.stokMalzemeleri);
+            this.stokMalzemeleriTableAdapter.Fill(this.verilerimDataSet.stokMalzemeleri);
 
         }
 
+
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=verilerim.mdb");
+        OleDbCommand sorgu;
+        OleDbDataReader veri;
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            int silinecekSatir = gvMalzemeler.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+
+            
+             string malzemeAdi = gvMalzemeler.Rows[silinecekSatir].Cells[0].Value.ToString(),
+                        birim = gvMalzemeler.Rows[silinecekSatir].Cells[1].Value.ToString(),
+                        markasi = gvMalzemeler.Rows[silinecekSatir].Cells[2].Value.ToString();
+
+
+                    con.Open();
+                    String sqlSorgu = "delete from stokMalzemeleri where malzemeAdi=@malzemeAdi and birim=@birim and markasi=@markasi";
+                    OleDbCommand sorgu = new OleDbCommand();
+                    sorgu.CommandText = sqlSorgu;
+                    sorgu.Connection = con;
+                    sorgu.Parameters.AddWithValue("@malzemeAdi", malzemeAdi);
+                    sorgu.Parameters.AddWithValue("@birim", birim);
+                    sorgu.Parameters.AddWithValue("@markasi", markasi);
+                    sorgu.ExecuteNonQuery();
+
+                    con.Close();
+
+            gvMalzemeler.Rows.RemoveAt(silinecekSatir);
+            gvMalzemeler.ClearSelection();
+
+            MessageBox.Show("Kaydınız silinmiştir");
+
+
+
 
         }
     }

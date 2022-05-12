@@ -40,19 +40,20 @@
             this.malzemeAdiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.stokMalzemeleriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.verilerimDataSet = new NTP.verilerimDataSet();
             this.stokMalzemeleriTableAdapter = new NTP.verilerimDataSetTableAdapters.stokMalzemeleriTableAdapter();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.gvMalzemeler)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stokMalzemeleriBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSet)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btEkle
             // 
+            this.btEkle.ContextMenuStrip = this.contextMenuStrip1;
             this.btEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btEkle.Location = new System.Drawing.Point(29, 170);
             this.btEkle.Name = "btEkle";
@@ -137,6 +138,7 @@
             this.gvMalzemeler.Location = new System.Drawing.Point(29, 236);
             this.gvMalzemeler.Name = "gvMalzemeler";
             this.gvMalzemeler.RowTemplate.Height = 24;
+            this.gvMalzemeler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvMalzemeler.Size = new System.Drawing.Size(497, 150);
             this.gvMalzemeler.TabIndex = 12;
             // 
@@ -158,6 +160,21 @@
             this.markasiDataGridViewTextBoxColumn.HeaderText = "Marka";
             this.markasiDataGridViewTextBoxColumn.Name = "markasiDataGridViewTextBoxColumn";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 28);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(94, 24);
+            this.toolStripMenuItem1.Text = "Sil";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // stokMalzemeleriBindingSource
             // 
             this.stokMalzemeleriBindingSource.DataMember = "stokMalzemeleri";
@@ -171,21 +188,6 @@
             // stokMalzemeleriTableAdapter
             // 
             this.stokMalzemeleriTableAdapter.ClearBeforeFill = true;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 56);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(175, 24);
-            this.toolStripMenuItem1.Text = "Sil";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // frmStokMalzemeCesidi
             // 
@@ -206,9 +208,9 @@
             this.Text = "Stok Malzeme Çeşitleri";
             this.Load += new System.EventHandler(this.frmStokMalzemeCesidi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvMalzemeler)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.stokMalzemeleriBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verilerimDataSet)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
